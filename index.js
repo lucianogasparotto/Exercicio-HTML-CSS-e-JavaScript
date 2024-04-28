@@ -8,8 +8,12 @@ function escalarTitulares(){
     const h4 = document.createElement('h4')
     h4.innerText = posicao + ' - ' + nomeJogador + ' - ' + numeroJogador
 
-    titulares.append(h4)
+    const confirmation = confirm('Adiciona o jogador ' + h4.innerText + ' a lista de titulares?')
 
+    if (confirmation) {
+        titulares.append(h4)
+    }
+    
     document.getElementById('posicao').value = ''
     document.getElementById('nome').value = ''
     document.getElementById('numero').value = ''
@@ -20,10 +24,14 @@ function removeTitular() {
     const numeroJogador = document.getElementById('remove-jogador').value
     const h4ToRemove = Array.from(titulares.getElementsByTagName('h4')).find(h4 => h4.innerText.includes(numeroJogador))
 
-    if (h4ToRemove) {
-        titulares.removeChild(h4ToRemove)
-    } else {
-        console.log('Jogador não encontrado')
+    const confirmation = confirm('Remover o jogador ' + h4ToRemove.innerText + '?')
+
+    if (confirmation) {
+        if (h4ToRemove) {
+            titulares.removeChild(h4ToRemove)
+        } else {
+            alert('Jogador não encontrado')
+        }
     }
 
     document.getElementById('remove-jogador').value = ''
