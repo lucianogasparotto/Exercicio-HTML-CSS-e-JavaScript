@@ -1,0 +1,34 @@
+* {
+    
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.escalar {
+    display: flex;
+    flex-direction: column;
+}
+
+#numero, #remove-jogador {
+    margin-bottom: 1rem;
+}
+
+.lista-titulares {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulares {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

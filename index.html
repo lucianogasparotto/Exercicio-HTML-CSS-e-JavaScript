@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escalando o seu Time</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Sporte Clube Corinthians Paulista</h1>
+    <h2>Cavalaria Titular para o proximo Jogo</h2>
+    <div>
+        <section class="escalar">
+            <h3>Escolha os jogadores</h3>
+            <label for="posicao">Posicao: </label>
+            <input type="text" name="posicao" id="posicao">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome">
+            <label for="numero">Numero: </label>
+            <input type="text" name="numero" id="numero">
+            <button onclick="escalarTitulares()">Escalar</button>
+        </section>
+        <section class="lista-titulares">
+            <h3>Lista dos Titulares</h3>
+            <div id="titulares"></div>
+            <label for="remove-jogador">Numero do Jogador a desescalar: </label>
+            <input type="text" name="remove-jogador" id="remove-jogador">
+            <button onclick="removeTitular()">Remover da Tituralidade</button>
+        </section>
+    </div>
+</body>
+</html>
